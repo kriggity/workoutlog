@@ -7,7 +7,7 @@ export default function Signup(props) {
 
     let handleSubmit = event => {
         event.preventDefault();
-        fetch('http://localhost:3001/api/user/', {
+        fetch('http://localhost:3001/api/user/createuser', {
             method: 'POST',
             body: JSON.stringify({
                 user: {
@@ -18,9 +18,9 @@ export default function Signup(props) {
             headers: new Headers({
                 'Content-Type': 'application/json'
             })
-                .then(response => response.json())
-                .then(data => props.updateToken(data.sessionToken))
         })
+            .then(response => response.json())
+            .then(data => props.updateToken(data.sessionToken))
     }
 
     return (
