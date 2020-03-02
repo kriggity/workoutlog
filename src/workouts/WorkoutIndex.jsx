@@ -11,7 +11,7 @@ export default function WorkoutIndex(props) {
     const [workoutToUpdate, setWorkoutToUpdate] = useState({});
 
     const fetchWorkouts = () => {
-        fetch('http;//localhost:3001/api/log', {
+        fetch('http://localhost:3001/api/log', {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
